@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #0c0000;
+  line-height: 1.8;
+}
+
+/* ================= HERO (UPDATED FIRST PAGE) ================= */
+
+.hero-landing {
+  background: #140b01;
+  padding: 80px 40px;
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* IMAGE LEFT */
+.hero-img {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid #ffffff; 
+}
+
+/* TEXT RIGHT */
+.hero-text {
+  width: 50%;
+  padding-left: 40px;
+}
+
+.hero-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #fce5d6;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.hero-btn {
+  background: #ffffff;
+  color: #200a01;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= REST OF SITE ================= */
+
+.card {
+  margin: 30px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  border-left: 5px solid #140b01;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: #140b01;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #2e0000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img,
+  .hero-text {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .hero-img img {
+    width: 260px;
+    height: 260px;
+  }
+}
