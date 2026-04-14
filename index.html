@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wendy Bongsisi — Cybersecurity Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- YOUR STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =============================================
+       PAGE LOADER (shows while page loads)
+       ============================================= -->
+  <div id="loader">
+    <div class="loader-logo">&gt; W_BONGSISI</div>
+    <div class="loader-bar-bg">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-text">INITIALIZING PORTFOLIO...</div>
+  </div>
+
+  <!-- =============================================
+       MATRIX RAIN BACKGROUND (animated canvas)
+       ============================================= -->
+  <canvas id="matrix"></canvas>
+
+  <!-- =============================================
+       NAVIGATION BAR
+       ============================================= -->
+  <nav id="navbar">
+    <div class="nav-logo">&lt;W.BONGSISI/&gt;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn">&#9728; LIGHT</button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- =============================================
+       SECTION 1: HERO
+       ============================================= -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">// AVAILABLE FOR OPPORTUNITIES</div>
+
+      <h1 class="hero-name">
+        <span class="first">MBIYDZENYUY WENDY</span>
+        <span class="last">BONGSISI</span>
+      </h1>
+
+      <!-- Typing text — roles are set in script.js -->
+      <div class="hero-typed">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </div>
+
+      <p class="hero-tagline">
+        Securing digital assets, engineering robust systems, and building
+        secure CI/CD pipelines that power the future.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+
+        <!--
+          EDIT: Replace "your-cv.pdf" with your actual CV filename.
+          Put your CV file in the SAME folder as index.html.
+          Example: if your CV is named "WendyCV.pdf" → href="WendyCV.pdf"
+        -->
+        <a href="your-cv.pdf" class="btn-outline" download>Download CV</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+
+      <!-- Stats — numbers are animated by script.js -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num counter-animate" data-target="15">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num counter-animate" data-target="8">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num counter-animate" data-target="3">0</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num counter-animate" data-target="100">0</div>
+          <div class="stat-label">Commitment %</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-arrow"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SECTION 2: ABOUT ME
+       ============================================= -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-title reveal"><span>01.</span> About Me</p>
+      <div class="section-line"></div>
+
+      <div class="about-grid">
+
+        <!-- LEFT COLUMN: Photo + Certifications -->
+        <div class="reveal">
+          <div class="about-photo">
+            <div class="photo-corner tl"></div>
+            <div class="photo-corner tr"></div>
+            <div class="photo-corner bl"></div>
+            <div class="photo-corner br"></div>
+
+            <!--
+              ============================================
+              HOW TO ADD YOUR PROFILE PHOTO:
+              ============================================
+              1. Put your photo file in the portfolio folder
+                 (same folder as index.html)
+                 Name it: photo.jpg  (or photo.png)
+
+              2. DELETE the two lines below (photo-icon and photo-label)
+
+              3. UNCOMMENT (remove the arrows) from this line:
+              <img src="photo.jpg" alt="Wendy Bongsisi">
+
+              Your photo will then fill the box automatically.
+              The CSS in style.css handles sizing.
+              ============================================
+            -->
+            <img src="photo.jpg" alt="Wendy Bongsisi" class="profile-photo">
+
+          </div>
+
+          <!-- Certifications -->
+          <div class="cert-grid" style="margin-top:1rem;">
+            <div class="cert-item">
+              <div class="cert-name">CEH</div>
+              <!-- EDIT: Change status as you earn certifications -->
+              <div class="cert-status">// IN PROGRESS</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">CompTIA Sec+</div>
+              <div class="cert-status">// PLANNED</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">OSCP</div>
+              <div class="cert-status">// PLANNED</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">AWS Security</div>
+              <div class="cert-status">// PLANNED</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Bio text -->
+        <div class="reveal">
+          <div class="about-text">
+            <!--
+              EDIT: Replace this text with your own biography.
+              Keep the <p> tags for proper spacing.
+            -->
+            <p>
+              Hi, I'm <strong style="color:var(--accent)">Wendy Bongsisi</strong> —
+              a passionate Cybersecurity Analyst and Software Developer with a strong
+              focus on penetration testing, vulnerability assessment, and DevSecOps engineering.
+            </p>
+            <p>
+              I specialize in identifying and mitigating security threats across web applications,
+              networks, and enterprise infrastructure. My background in software engineering gives
+              me a unique edge: I understand both how systems are built and how they can be attacked.
+            </p>
+            <p>
+              Currently pursuing advanced cybersecurity certifications while building real-world
+              experience through security audits, CTF competitions, and secure software development
+              projects. I'm passionate about integrating security into every stage of the
+              development lifecycle.
+            </p>
+            <p>
+              My career goal is to become a top-tier penetration tester and DevSecOps engineer,
+              helping organizations build and maintain truly secure digital environments.
+            </p>
+          </div>
+
+          <!-- Skill tags (edit or add your own) -->
+          <div class="about-tags">
+            <span class="tag">Penetration Testing</span>
+            <span class="tag">Vulnerability Assessment</span>
+            <span class="tag">DevSecOps</span>
+            <span class="tag">Android Dev</span>
+            <span class="tag">CI/CD Security</span>
+            <span class="tag">Network Security</span>
+          </div>
+
+          <!-- Animated counters -->
+          <div class="counters-row">
+            <div class="counter-item">
+              <div class="counter-num counter-animate" data-target="5">0</div>
+              <div class="counter-label">Tools Mastered</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-num counter-animate" data-target="12">0</div>
+              <div class="counter-label">Projects Built</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-num counter-animate" data-target="3">0</div>
+              <div class="counter-label">Years Learning</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SECTION 3: SKILLS
+       ============================================= -->
+  <section id="skills">
+    <div class="section-inner">
+      <p class="section-title reveal"><span>02.</span> Technical Skills</p>
+      <div class="section-line"></div>
+      <p class="section-subtitle reveal">
+        A categorized breakdown of my technical expertise across
+        cybersecurity, development, and DevOps.
+      </p>
+
+      <div class="skills-grid">
+
+        <!-- CYBERSECURITY SKILLS -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">Cybersecurity</div>
+
+          <!-- EDIT: Change skill names and percentages (data-width) -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Penetration Testing</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Vulnerability Assessment</span>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="88"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Network Security</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Web Application Security</span>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="82"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Incident Response</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="75"></div>
+            </div>
+          </div>
+
+          <div class="skill-cards">
+            <span class="skill-chip">Metasploit</span>
+            <span class="skill-chip">Burp Suite</span>
+            <span class="skill-chip">Nmap</span>
+            <span class="skill-chip">Wireshark</span>
+            <span class="skill-chip">OWASP</span>
+          </div>
+        </div>
+
+        <!-- DEVELOPMENT SKILLS -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">Software Development</div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Java / Kotlin</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">JavaScript / React</span>
+              <span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="78"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML / CSS</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="90"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Android Development</span>
+              <span class="skill-pct">76%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="76"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Python (Security Scripts)</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="72"></div>
+            </div>
+          </div>
+
+          <div class="skill-cards">
+            <span class="skill-chip">Android Studio</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- DEVSECOPS SKILLS -->
+        <div class="skill-category reveal">
+          <div class="skill-cat-title">DevSecOps / CI-CD</div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">GitHub Actions</span>
+              <span class="skill-pct">83%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="83"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Docker Security</span>
+              <span class="skill-pct">77%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="77"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Jenkins Pipelines</span>
+              <span class="skill-pct">72%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="72"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Security Pipeline Integration</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Automated Testing</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="75"></div>
+            </div>
+          </div>
+
+          <div class="skill-cards">
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">Jenkins</span>
+            <span class="skill-chip">SAST/DAST</span>
+            <span class="skill-chip">SonarQube</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SECTION 4: PROJECTS
+       Projects are rendered by script.js from the
+       projects array. Edit the array there.
+       ============================================= -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="section-title reveal"><span>03.</span> Projects</p>
+      <div class="section-line"></div>
+
+      <!-- Filter tabs -->
+      <div class="projects-tabs">
+        <button class="proj-tab active" onclick="filterProjects('all', this)">All</button>
+        <button class="proj-tab" onclick="filterProjects('pentest', this)">Penetration Testing</button>
+        <button class="proj-tab" onclick="filterProjects('dev', this)">Development</button>
+        <button class="proj-tab" onclick="filterProjects('devops', this)">DevSecOps</button>
+      </div>
+
+      <!-- Project cards are injected here by script.js -->
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SECTION 5: EXPERIENCE
+       ============================================= -->
+  <section id="experience">
+    <div class="section-inner">
+      <p class="section-title reveal"><span>04.</span> Experience</p>
+      <div class="section-line"></div>
+
+      <div class="timeline">
+
+        <!-- TIMELINE ITEM 1 — EDIT with your real experience -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2024 — PRESENT</div>
+          <div class="tl-card">
+            <div class="tl-title">Cybersecurity Analyst (Trainee / Intern)</div>
+            <div class="tl-org">Academic &amp; Practical Projects — Cameroon</div>
+            <div class="tl-desc">
+              Conducting vulnerability assessments on web applications and networks.
+              Performing penetration testing exercises using industry-standard tools.
+              Documenting risk assessment reports and remediation recommendations.
+            </div>
+            <div class="tl-tags">
+              <span class="tag">Metasploit</span>
+              <span class="tag">Nmap</span>
+              <span class="tag">Burp Suite</span>
+              <span class="tag">Kali Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2023 — 2024</div>
+          <div class="tl-card">
+            <div class="tl-title">Android Application Developer</div>
+            <div class="tl-org">Independent Projects</div>
+            <div class="tl-desc">
+              Designed and built multiple Android applications including an emergency alert
+              system and productivity tools. Implemented secure coding practices, user
+              authentication, and API integration in mobile applications.
+            </div>
+            <div class="tl-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Android Studio</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 3 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2023</div>
+          <div class="tl-card">
+            <div class="tl-title">DevSecOps Pipeline Engineer</div>
+            <div class="tl-org">Academic CI/CD Projects</div>
+            <div class="tl-desc">
+              Built automated CI/CD pipelines integrating security scanning at every stage.
+              Configured Docker containers with hardened security profiles. Integrated SAST
+              tools and automated security testing into GitHub Actions workflows.
+            </div>
+            <div class="tl-tags">
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">SAST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 4 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2022 — 2023</div>
+          <div class="tl-card">
+            <div class="tl-title">Software Engineering Student</div>
+            <div class="tl-org">University / Technical Institute</div>
+            <div class="tl-desc">
+              Built foundational skills in software engineering, data structures, algorithms,
+              and web development. Started cybersecurity journey through self-study, CTF
+              competitions, and hands-on lab environments.
+            </div>
+            <div class="tl-tags">
+              <span class="tag">Java</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Networking</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div style="margin-top:3rem;">
+        <p class="section-title reveal" style="font-size:1.3rem;">
+          <span>05.</span> Testimonials
+        </p>
+        <div class="section-line"></div>
+        <div class="testimonials-grid">
+
+          
+          <div class="testi-card reveal">
+            <p class="testi-text">
+              Wendy demonstrated exceptional analytical skills during our security audit project.
+              Her ability to identify vulnerabilities and document findings clearly was impressive
+              for someone at her level.
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">JN</div>
+              <div>
+                
+                <div class="testi-role">// ACADEMIC SUPERVISOR</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal">
+            <p class="testi-text">
+              The CI/CD pipeline Wendy built for our project automated our entire security
+              testing workflow. Zero vulnerabilities reached production in 3 months —
+              remarkable attention to detail.
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">AT</div>
+              <div>
+                <div class="testi-name">Mr Jackson</div>
+                <div class="testi-role">// PROJECT COLLABORATOR</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal">
+            <p class="testi-text">
+              Her Android emergency alert app was one of the most polished and secure student
+              projects I've reviewed. Clean code architecture and thoughtful threat modeling
+              built right in.
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">MB</div>
+              <div>
+        
+                <div class="testi-role">// TECH MENTOR</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SECTION 6: CONTACT
+       ============================================= -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-title reveal"><span>06.</span> Contact Me</p>
+      <div class="section-line"></div>
+
+      <div class="contact-grid">
+
+        <!-- LEFT: Contact info -->
+        <div class="reveal">
+          <p style="color:var(--text2);margin-bottom:2rem;line-height:1.8;font-size:0.95rem;">
+            Available for internships, cybersecurity roles, freelance projects,
+            and DevSecOps opportunities. Let's build something secure together.
+          </p>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">&#128231;</div>
+            <div>
+              <div class="contact-label">Email</div>
+              
+              <div class="contact-val">
+                <a href="mailto:bmwendy09@gmail.com">bmwendy09@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">&#128241;</div>
+            <div>
+              <div class="contact-label">WhatsApp / Phone</div>
+              
+              <div class="contact-val">+237 682389897</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-val">Yaounde, Cameroon</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon">&#128279;</div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              
+              <div class="contact-val">
+                <a href="https://www.linkedin.com/in/mbiydzenyuy-wendy-bongsisi-7697893b0/" target="_blank">
+                  linkedin.com/in/mbiydzenyuy-wendy-bongsisi-769783b0/
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <!-- EDIT: Replace all href values with your real profile URLs -->
+            <a class="social-btn" href="https://github.com/B-Wendy" target="_blank">GitHub</a>
+            <a class="social-btn" href="https://www.linkedin.com/in/mbiydzenyuy-wendy-bongsisi-7697893b0/" target="_blank">LinkedIn</a>
+            <a class="social-btn" href="https://wa.me/237682389897" target="_blank">WhatsApp</a>
+           
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact form -->
+        <div class="reveal">
+          <div class="contact-form">
+            <div id="formContent">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" id="fname" placeholder="Your full name" />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" id="femail" placeholder="your@email.com" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" id="fphone" placeholder="+237 XXX XXX XXX" />
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" id="fsubject" placeholder="Opportunity / Collaboration" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea id="fmessage" placeholder="Tell me about the opportunity..."></textarea>
+              </div>
+              <!-- submitForm() is defined in script.js -->
+              <button class="btn-submit" onclick="submitForm()">SEND MESSAGE</button>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div style="font-size:2rem;margin-bottom:1rem;">&#10003;</div>
+              <div style="font-size:1rem;margin-bottom:0.5rem;">MESSAGE TRANSMITTED</div>
+              <div style="color:var(--text3);font-size:0.8rem;">I'll get back to you within 24 hours.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer>
+    <div class="footer-logo">&lt;W.BONGSISI /&gt;</div>
+    <p class="footer-text" style="margin-top:0.5rem;">
+      Cybersecurity Analyst &middot; Penetration Tester &middot; DevSecOps Engineer
+    </p>
+    <p class="footer-text" style="margin-top:0.5rem;color:var(--text3);">
+      &copy; 2025 Mbiydzenyuy Wendy Bongsisi &middot; Yaounde, Cameroon
+    </p>
+    <p class="footer-text" style="margin-top:0.5rem;font-family:'Share Tech Mono',monospace;font-size:0.7rem;">
+      // BUILT WITH HTML &middot; CSS &middot; JAVASCRIPT
+    </p>
+  </footer>
+
+
+  <!-- =============================================
+       PROJECT MODAL POPUP
+       Content is injected by openModal() in script.js
+       ============================================= -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">&#10005;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       FLOATING BUTTONS
+       ============================================= -->
+  <a class="float-contact" href="#contact" title="Contact Me">&#9993;</a>
+  <div class="back-top" id="backTop">&#8593;</div>
+
+
+  <!-- YOUR JAVASCRIPT (must be last, before </body>) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
